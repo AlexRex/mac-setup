@@ -4,7 +4,7 @@ This document describes how I set up my developer environment on a new MacBook f
 
 The document assumes you are new to Mac. The steps below were tested on **macOS Sierra**.
 
-- [System Setup](#System-setup)
+- [System setup](#System-setup)
 - [System update](#system-update)
 - [System preferences](#system-preferences)
 - [Consolas](#consolas)
