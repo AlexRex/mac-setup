@@ -284,7 +284,7 @@ Here is a quick list of some apps in the installer script:
 * Sublime Text 3 & Package Control and VIM
 * A bunch of Fonts.
 * Essential Quicklook plugins (so you can view code, zip contents and other things)
-* Essential Software, including Chrome, iTerm2, Dropbox, Slack, Sublime, and a few more.
+* Essential Software: Chrome, Firefox, Dropbox, Skype, Slack, Spotify, iTerm2, SublimeText, SourceTree and a few more.
 * A lot of OSX tweaks, like disabling the annoying Mac startup sound
 
 ### Options
