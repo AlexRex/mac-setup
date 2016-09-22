@@ -17,7 +17,7 @@ The document assumes you are new to Mac. The steps below were tested on **macOS 
 - [Projects folder](#projects-folder)
 - [Apps Included](#apps-included)
 
-## System Setup
+## System setup
 
 This will run the installer to setup the basic software for development, plus some tweaks and tools.
 
