@@ -147,7 +147,7 @@ os.system('git config --global credential.helper osxkeychain')
 # Appropriate Software
 if options['developer'] == 'y':
   print "Installing Developer Tools"
-  os.system('brew cask install webstorm ngrok sequel-pro cyberduck robomongo docker-toolbox heroku-toolbelt')
+  os.system('brew cask install ngrok sequel-pro cyberduck mysql mongodb redis robomongo docker-toolbox heroku-toolbelt')
 
 if options['android'] == 'y':
   print "Installing Android Tools"
@@ -161,7 +161,7 @@ if options['ios'] == 'y':
 
 if options['web'] == 'y':
   print "Installing Web Developer Tools"
-  os.system('brew cask install imageoptim imagealpha')
+  os.system('brew cask install imageoptim imagealpha webstorm')
 
 if options['designer'] == 'y':
   print "Installing Designer Tools"
