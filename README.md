@@ -1,11 +1,10 @@
 # macOS Sierra Dev Setup
 
-This document describes how I set up my developer environment on a new MacBook for web development.
+This document describes how I set up my developer environment on macOS for web development.
 
-The document assumes you are new to Mac. The steps below were tested on **macOS Sierra**.
+The steps below were tested on **macOS Sierra**.
 
 - [System setup](#System-setup)
-- [System update](#system-update)
 - [System preferences](#system-preferences)
 - [Consolas](#consolas)
 - [Source Code Pro](#source-code-pro)
@@ -20,24 +19,20 @@ The document assumes you are new to Mac. The steps below were tested on **macOS 
 
 ## System setup
 
-This will run the installer to setup the basic software for development, plus some tweaks and tools.
+We're going to run a script to setup the basic software for development, plus some tweaks and tools.
 
 First we need to install the xcode command line tools and then restart, so open a terminal and:
 
 ```shell
 xcode-select --install
 ```
-Restart and then:
 
+Restart and then:
 ```shell
 /usr/bin/python -c "$(curl -fsSL https://raw.githubusercontent.com/AlexRex/mac-setup/master/setup.py)"
 ```
 
 And just follow the instructions. :)
-
-## System update
-
-First thing you need to do, on any OS actually, is update the system! For that: **Apple Icon > Software Update...**
 
 ## System preferences
 
@@ -70,9 +65,11 @@ And click **Install Font**. Thanks to Alexander Zhuravlev for his [post](http://
 
 ## Source Code Pro
 
-Another font very useful.
+Another font very awesome. Actually this is my main font for Sublime Text, it is really readably.
 
 Downoad it from its [repo](https://github.com/adobe-fonts/source-code-pro/releases).
+
+Then in the folder OTF select all the *.otf files and open them. (Tip: Use <kbd>cmd</kbd> + <kbd> Enter </kbd> to open files).
 
 ## Beautiful terminal
 
@@ -103,7 +100,7 @@ Let's create a shortcut so we can launch Sublime Text from the command-line:
 
     $ cd ~
     $ mkdir bin
-    $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+    $ ln -s "/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 Now I can open a file with `$ subl myfile.py` or start a new project in the current directory with `$ subl .`. Pretty cool.
 
@@ -278,7 +275,7 @@ This really depends on how you want to organize your files, but I like to put al
 
 ## Apps Included
 
-Here is a quick list of some apps in the installator:
+Here is a quick list of some apps in the installer script:
 
 ### Software:
 
