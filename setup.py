@@ -131,11 +131,23 @@ print "Installing Essential Apps"
 os.system('brew cask install iterm2 spectacle the-unarchiver')
 os.system('brew cask install google-chrome firefox sourcetree sublime-text dropbox skype spotify slack vlc macdown cheatsheet trayplay')
 
+print "Creating Essential Dotfiles"
+os.system('mkdir ~/.dotfiles')
+os.system('curl -o ~/.bash_profile https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.bash_profile')
+os.system('curl -o ~/.bash_profile https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.gitconfig')
+os.system('curl -o ~/.dotfiles/.aliases https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.aliases')
+os.system('curl -o ~/.dotfiles/.bash_profile https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.bash_profile')
+os.system('curl -o ~/.dotfiles/.bash_prompt https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.bash_prompt')
+
+print "Setting Git Credentials"
+os.system('git config --global user.name "%s"' % name)
+os.system('git config --global user.email "%s"' % email)
+os.system('git config --global credential.helper osxkeychain')
 
 # Appropriate Software
 if options['developer'] == 'y':
   print "Installing Developer Tools"
-  os.system('brew cask install webstorm docker-toolbox ngrok sequel-pro cyberduck robomongo')
+  os.system('brew cask install webstorm ngrok sequel-pro cyberduck robomongo docker-toolbox heroku-toolbelt')
 
 if options['android'] == 'y':
   print "Installing Android Tools"
@@ -243,11 +255,9 @@ if options['sublime'] == 'y':
       best_prefs = {
         "always_show_minimap_viewport": False,
         "bold_folder_labels": True,
-        #"theme": "Material-Theme.sublime-theme",
-        #"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
-        "color_scheme": "Packages/Theme - itg.flat/itg.dark.tmTheme",
-        "theme": "itg.flat.dark.sublime-theme",
-        "itg_small_tabs": True,
+        #"color_scheme": "Packages/Theme - itg.flat/itg.dark.tmTheme",
+        #"theme": "itg.flat.dark.sublime-theme",
+        #"itg_small_tabs": True,
         "font_options": [
           "gray_antialias",
           "subpixel_antialias"

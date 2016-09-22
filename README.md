@@ -27,7 +27,6 @@ The document assumes you are new to Mac. The steps below were tested on **macOS 
 - [Heroku](#heroku)
 - [MongoDB](#mongodb)
 - [Redis](#redis)
-- [Elasticsearch](#elasticsearch)
 - [Projects folder](#projects-folder)
 - [Apps](#apps)
 
@@ -43,86 +42,7 @@ In **Apple Icon > System Preferences**:
 
 - Trackpad > Tap to click
 - Keyboard > Key Repeat > Fast (all the way to the right)
-- Keyboard > Delay Until Repeat > Short (all the way to the right)
-- Dock > Automatically hide and show the Dock
-
-## Google Chrome
-
-Install your favorite browser, mine happens to be Chrome.
-
-Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/browser/). Open the **.dmg** file once it's done downloading (this will mount the disk image), and drag and drop the **Google Chrome** app into the Applications folder (on the Mac, most applications are installed this way). When done, you can unmount the disk in Finder (the small "eject" icon next to the disk under **Devices**).
-
-## iTerm2
-
-Since we're going to be spending a lot of time in the command-line, let's install a better terminal than the default one. Download and install [iTerm2](http://www.iterm2.com/) (the newest version, even if it says "beta release").
-
-In **Finder**, drag and drop the **iTerm** Application file into the **Applications** folder.
-
-You can now launch iTerm, through the **Launchpad** for instance.
-
-Let's just quickly change some preferences. In **iTerm > Preferences...**, under the tab **General**, uncheck **Confirm closing multiple sessions** and **Confirm "Quit iTerm2 (Cmd+Q)" command** under the section **Closing**.
-
-In the tab **Profiles**, create a new one with the "+" icon, and rename it to your first name for example. Then, select **Other Actions... > Set as Default**. Finally, under the section **Window**, change the size to something better, like **Columns: 125** and **Rows: 35**.
-
-When done, hit the red "X" in the upper left (saving is automatic in OS X preference panes). Close the window and open a new one to see the size change.
-
-## Homebrew
-
-Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
-
-### Install
-
-An important dependency before Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers that will allow you to build things from source.
-
-Now, Xcode weights something like 2GB, and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode. To do this you need to go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases). Unfortunately, you're greeted by a rather annoying questionnaire. All questions are required, so feel free to answer at random.
-
-Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
-
-**Note**: If you are running **OS X 10.9 Mavericks**, then you can install the Xcode Command Line Tools directly from the command line with `$ xcode-select --install`, and you don't have to go through the download page and the questionnaire.
-
-Finally, we can install Hombrew! In the terminal paste the following line (without the `$`), hit **Enter**, and follow the steps on the screen:
-
-    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-One thing we need to do is tell the system to use programs installed by Hombrew (in `/usr/local/bin`) rather than the OS default if it exists. We do this by adding `/usr/local/bin` to your `$PATH` environment variable:
-
-    $ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
-
-Open a new terminal tab with **Cmd+T** (you should also close the old one), then run the following command to make sure everything works:
-
-    $ brew doctor
-
-### Usage
-
-To install a package (or **Formula** in Homebrew vocabulary) simply type:
-
-    $ brew install <formula>
-
-To update Homebrew's directory of formulae, run:
-
-    $ brew update
-
-**Note**: I've seen that command fail sometimes because of a bug. If that ever happens, run the following (when you have Git installed):
-
-    $ cd /usr/local
-    $ git fetch origin
-    $ git reset --hard origin/master
-
-To see if any of your packages need to be updated:
-
-    $ brew outdated
-
-To update a package:
-
-    $ brew upgrade <formula>
-
-Homebrew keeps older versions of packages installed, in case you want to roll back. That rarely is necessary, so you can do some cleanup to get rid of those old versions:
-
-    $ brew cleanup
-
-To see what you have installed (with their version numbers):
-
-    $ brew list --versions
+- Dock > Animation
 
 ## Consolas
 
@@ -143,11 +63,17 @@ If you don't have Office, follow these steps:
 
 And click **Install Font**. Thanks to Alexander Zhuravlev for his [post](http://blog.ikato.com/post/15675823000/how-to-install-consolas-font-on-mac-os-x).
 
+## Source Code Pro
+
+Another font very useful.
+
+Downoad it from its [repo](https://github.com/adobe-fonts/source-code-pro/releases).
+
 ## Beautiful terminal
 
 Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place. What follows might seem like a lot of work, but trust me, it'll make the development experience so much better.
 
-Let's go ahead and start by changing the font. In **iTerm > Preferences...**, under the tab **Profiles**, section **Text**, change both fonts to **Consolas 13pt**.
+Let's go ahead and start by changing the font. In **iTerm > Preferences...**, under the tab **Profiles**.
 
 Now let's add some color. I'm a big fan of the [Solarized](http://ethanschoonover.com/solarized) color scheme. It is supposed to be scientifically optimal for the eyes. I just find it pretty.
 
