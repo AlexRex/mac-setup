@@ -300,6 +300,12 @@ Here is a quick list of some apps in the installator:
 * *Animations*: Makes all the Finder animations (Spaces, Exposé, Resizing) much faster.
 
 
+## Credits
+
+This is a tweaked guide original from [nicolashery](https://github.com/nicolashery/mac-dev-setup).
+And the setup script is original from the [Aerloab team](https://github.com/Aerolab/setup).
+
+Thank you so much to the both.
 
 
 
