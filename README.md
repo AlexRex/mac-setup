@@ -16,6 +16,7 @@ The document assumes you are new to Mac. The steps below were tested on **macOS 
 - [Redis](#redis)
 - [Projects folder](#projects-folder)
 - [Apps Included](#apps-included)
+- [Credits](#credits)
 
 ## System setup
 
