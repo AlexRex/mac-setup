@@ -280,20 +280,19 @@ Here is a quick list of some apps in the installer script:
 ### Software:
 
 * Brew & Brew Cask with AutoUpdate
-* Node.js, Ruby, Python, Bower, Gulp, Grunt, Git, Yeoman, N, own-ip
-* Sublime Text 3 & Package Control and VIM
+* Node.js, Ruby, Python, Bower, Gulp, Grunt, Git, Yeoman, N (node manager), own-ip.
 * A bunch of Fonts.
 * Essential Quicklook plugins (so you can view code, zip contents and other things)
-* Essential Software: Chrome, Firefox, Dropbox, Skype, Slack, Spotify, iTerm2, SublimeText, SourceTree and a few more.
-* A lot of OSX tweaks, like disabling the annoying Mac startup sound
+* Essential Software: Chrome, Firefox, Dropbox, Skype, Slack, Spotify, iTerm2, SublimeText, Atom, SourceTree and a few more.
+* A lot of OSX tweaks, like disabling the annoying Mac startup sound.
 
 ### Options
 
-* *Developer Tools*: Ngrok, Sequel Pro, Cyberduck, mysql, mongodb, redis, robomongo, docker-toolbox, heroku-toolbelt
-* *Android Tools*: Java, Android Studio
-* *iOS Tools*: Cocoapods
-* *Web Developer Tools*: Imageoptim, WebStorm
-* *Designer Tools*: Invision Sync, Scala Preview
+* *Developer Tools*: Ngrok, Sequel Pro, Cyberduck, mysql, mongodb, redis, robomongo, docker, heroku-toolbelt.
+* *Android Tools*: Java, Android Studio.
+* *iOS Tools*: Cocoapods.
+* *Web Developer Tools*: Imageoptim, WebStorm.
+* *Designer Tools*: Invision Sync, Scala Preview.
 * *Sublime Text 3*: Emmet, Markdown, SASS, Linters, Git, Material Theme and other packages.
 * *Animations*: Makes all the Finder animations (Spaces, Exposé, Resizing) much faster.
 
@@ -304,6 +303,3 @@ This is a tweaked guide original from [nicolashery](https://github.com/nicolashe
 And the setup script is original from the [Aerloab team](https://github.com/Aerolab/setup).
 
 Thank you so much to the both.
-
-
-

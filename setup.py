@@ -129,7 +129,7 @@ os.system('brew cask install font-dosis font-droid-sans font-open-sans font-open
 
 print "Installing Essential Apps"
 os.system('brew cask install iterm2 spectacle the-unarchiver')
-os.system('brew cask install google-chrome firefox sourcetree sublime-text dropbox skype spotify slack vlc macdown cheatsheet trayplay')
+os.system('brew cask install google-chrome firefox sourcetree sublime-text atom dropbox skype spotify slack vlc macdown cheatsheet trayplay')
 
 print "Creating Essential Dotfiles"
 os.system('mkdir ~/.dotfiles')
@@ -147,7 +147,7 @@ os.system('git config --global credential.helper osxkeychain')
 # Appropriate Software
 if options['developer'] == 'y':
   print "Installing Developer Tools"
-  os.system('brew cask install ngrok sequel-pro cyberduck mysql mongodb redis robomongo docker-toolbox heroku-toolbelt')
+  os.system('brew cask install ngrok sequel-pro cyberduck mysql mongodb redis robomongo docker heroku-toolbelt')
 
 if options['android'] == 'y':
   print "Installing Android Tools"
@@ -371,5 +371,3 @@ if options['sublime'] == 'y':
 print "*************************************"
 print "Remember to restart your Mac"
 print "*************************************"
-
-
