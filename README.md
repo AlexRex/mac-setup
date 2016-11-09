@@ -17,6 +17,10 @@ The steps below were tested on **macOS Sierra**.
 - [Apps Included](#apps-included)
 - [Credits](#credits)
 
+## TO-DO
+
+- Change Sublime for Atom.
+
 ## System setup
 
 We're going to run a script to setup the basic software for development, plus some tweaks and tools.
