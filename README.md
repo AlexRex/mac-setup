@@ -4,7 +4,7 @@ This document describes how I set up my developer environment on macOS for web d
 
 The steps below were tested on **macOS Sierra**.
 
-- [System setup](#System-setup)
+- [System setup](#system-setup)
 - [System preferences](#system-preferences)
 - [Consolas](#consolas)
 - [Source Code Pro](#source-code-pro)
