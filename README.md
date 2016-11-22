@@ -20,6 +20,7 @@ The steps below were tested on **macOS Sierra**.
 ## TO-DO
 
 - Change Sublime for Atom.
+- Add [bash-completions](http://blog.alextorres.me/2016/07/13/bash-completions-osx/)
 
 ## System setup
 
