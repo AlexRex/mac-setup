@@ -136,7 +136,6 @@ os.system('mkdir ~/.dotfiles')
 os.system('curl -o ~/.bash_profile https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.bash_profile')
 os.system('curl -o ~/.gitconfig https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.gitconfig')
 os.system('curl -o ~/.dotfiles/.aliases https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.aliases')
-os.system('curl -o ~/.dotfiles/.bash_profile https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.bash_profile')
 os.system('curl -o ~/.dotfiles/.bash_prompt https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.bash_prompt')
 
 print "Setting Git Credentials"
