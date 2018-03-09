@@ -15,7 +15,6 @@ options = {
 		'ios': '',
 		'designer': '',
 		'web' : '',
-		'sublime': '',
 		'vim': '',
 		'animations': '',
 		'showhiddenfiles': '',
@@ -49,9 +48,6 @@ if options['developer'] == 'y':
 
 while options['designer'] not in ['y', 'n']:
   options['designer'] = raw_input("Do you want to install Designer Tools? (%s)  " % '|'.join(['y','n']))
-
-while options['sublime'] not in ['y', 'n']:
-  options['sublime'] = raw_input("Do you want to install Sublime Text 3 with Plugins? (%s)  " % '|'.join(['y','n']))
 
 while options['vim'] not in ['y', 'n']:
   options['vim'] = raw_input("Do you want to install VIM with Awesome VIM? (%s)  " % '|'.join(['y','n']))
@@ -129,7 +125,8 @@ os.system('brew cask install font-dosis font-droid-sans font-open-sans font-open
 
 print "Installing Essential Apps"
 os.system('brew cask install iterm2 spectacle the-unarchiver')
-os.system('brew cask install google-chrome firefox sourcetree sublime-text atom dropbox skype spotify slack vlc macdown cheatsheet trayplay')
+os.system('brew cask install google-chrome firefox sourcetree atom dropbox skype spotify slack vlc macdown cheatsheet trayplay')
+os.system('ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom')
 
 print "Creating Essential Dotfiles"
 os.system('mkdir ~/.dotfiles')
@@ -146,7 +143,7 @@ os.system('git config --global credential.helper osxkeychain')
 # Appropriate Software
 if options['developer'] == 'y':
   print "Installing Developer Tools"
-  os.system('brew cask install ngrok sequel-pro cyberduck mysql mongodb redis robomongo docker heroku-toolbelt')
+  os.system('brew cask install ngrok sequel-pro cyberduck mysql mongodb redis robomongo docker')
 
 if options['android'] == 'y':
   print "Installing Android Tools"
@@ -166,131 +163,6 @@ if options['designer'] == 'y':
   print "Installing Designer Tools"
   os.system('brew cask install invisionsync iconjar skala-preview lingo')
   os.system('brew cask install sketch-tool principle framer-studio origami')
-
-
-# Sublime Text 3 Package Control & Binding
-sublime_settings_path = os.path.expanduser("~") + '/Library/Application Support/Sublime Text 3/'
-sublime_user_path = sublime_settings_path + 'Packages/User/'
-
-if not os.path.isfile( sublime_settings_path + 'Installed Packages/Package Control.sublime-package'):
-  print "Installing Package Control"
-  os.system('wget -P ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages https://packagecontrol.io/Package%20Control.sublime-package')
-
-os.system('ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime')
-
-
-# Sublime Text 3 with Recommended Packages
-if options['sublime'] == 'y':
-  print "Customizing Sublime Text"
-
-  if not os.path.exists(os.path.dirname(sublime_settings_path)):
-    os.makedirs(os.path.dirname(sublime_settings_path))
-
-  if not os.path.exists(os.path.dirname(sublime_user_path)):
-    os.makedirs(os.path.dirname(sublime_user_path))
-
-
-  # Set the default packages
-  if not os.path.isfile( sublime_user_path + 'Package Control.sublime-settings'):
-    with open( sublime_user_path + 'Package Control.sublime-settings', 'w+') as f:
-      print "Installing Default Packages"
-
-      best_packages = {
-        "installed_packages": [
-          "BracketHighlighter",
-          "Color Highlighter",
-          "ColorPicker",
-
-          "Emmet",
-          "JavaScript Completions",
-          "JavaScriptNext - ES6 Syntax",
-          "TypeScript",
-
-          "MarkdownEditing",
-          "Markdown Preview",
-          "Material Theme",
-          "Theme - itg.flat",
-          "Theme - Spacegray",
-          "Sass",
-          "SassBeautify",
-
-          "Package Control",
-          "SideBarEnhancements",
-          "SublimeCodeIntel",
-          "FileDiffs",
-          "Git",
-          "GitGutter",
-
-          "SublimeLinter",
-          "SublimeLinter-annotations",
-          "SublimeLinter-contrib-sass-lint",
-          "SublimeLinter-html-tidy",
-          "SublimeLinter-jshint",
-          "SublimeLinter-pep8",
-
-          "Web Inspector"
-        ]
-      }
-
-      prefs_plain = f.read()
-      prefs = {}
-
-      if prefs_plain != '':
-        prefs = json.loads(prefs_plain)
-
-      for key, value in best_packages.iteritems():
-        if key not in prefs:
-          prefs[key] = value
-
-      f.write(json.dumps(prefs, sort_keys=True, indent=4, separators=(',', ': ')))
-
-
-  # Set some default settings
-  if not os.path.isfile( sublime_user_path + 'Preferences.sublime-settings'):
-    with open( sublime_user_path + 'Preferences.sublime-settings', 'w+') as f:
-
-      print "Configuring Default Settings"
-
-      best_prefs = {
-        "always_show_minimap_viewport": False,
-        "bold_folder_labels": True,
-        #"color_scheme": "Packages/Theme - itg.flat/itg.dark.tmTheme",
-        #"theme": "itg.flat.dark.sublime-theme",
-        #"itg_small_tabs": True,
-        "font_options": [
-          "gray_antialias",
-          "subpixel_antialias"
-        ],
-        "font_face": "Source Code Pro",
-        "font_size": 14,
-        "indent_guide_options": [
-          "draw_normal",
-          "draw_active"
-        ],
-        "line_padding_bottom": 1,
-        "line_padding_top": 1,
-        "overlay_scroll_bars": "enabled",
-        "tab_size": 2,
-        "word_wrap": False,
-        "wrap_width": 80,
-        "translate_tabs_to_spaces": True,
-        "trim_trailing_white_space_on_save": True,
-        "highlight_line": True,
-        "highlight_modified_tabs": True
-      }
-
-      prefs_plain = f.read()
-      prefs = {}
-
-      if prefs_plain != '':
-        prefs = json.loads(prefs_plain)
-
-      for key, value in best_prefs.iteritems():
-        if key not in prefs:
-          prefs[key] = value
-
-      f.write(json.dumps(prefs, sort_keys=True, indent=4, separators=(',', ': ')))
-
 
 if options['vim'] == 'y':
   print "Installing VIM + Awesome VIM"
@@ -360,12 +232,6 @@ print "Your SSH Public Key Is:"
 with open(os.path.expanduser("~") + '/.ssh/id_rsa.pub', 'r') as f:
   print f.read()
 print ""
-
-if options['sublime'] == 'y':
-
-  print "*************************************"
-  print "Please launch Sublime Text to finish setup"
-  print ""
 
 print "*************************************"
 print "Remember to restart your Mac"

@@ -10,7 +10,6 @@ The steps below were tested on **macOS Sierra**.
 - [Source Code Pro](#source-code-pro)
 - [Beautiful terminal](#beautiful-terminal)
 - [MySQL](#mysql)
-- [Heroku](#heroku)
 - [MongoDB](#mongodb)
 - [Redis](#redis)
 - [Projects folder](#projects-folder)
@@ -70,7 +69,7 @@ And click **Install Font**. Thanks to Alexander Zhuravlev for his [post](http://
 
 ## Source Code Pro
 
-Another font very awesome. Actually this is my main font for Sublime Text, it is really readably.
+Another font very awesome.
 
 Downoad it from its [repo](https://github.com/adobe-fonts/source-code-pro/releases).
 
@@ -98,16 +97,6 @@ At this point you can also change your computer's name, which shows up in this t
 Now we have a terminal we can work with!
 
 (Thanks to Mathias Bynens for his awesome [dotfiles](https://github.com/mathiasbynens/dotfiles).)
-
-## Sublime Text
-
-Let's create a shortcut so we can launch Sublime Text from the command-line:
-
-    $ cd ~
-    $ mkdir bin
-    $ ln -s "/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-
-Now I can open a file with `$ subl myfile.py` or start a new project in the current directory with `$ subl .`. Pretty cool.
 
 ## MySQL
 
@@ -146,41 +135,6 @@ To connect with the command-line client, run:
 In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Workbench](http://www.mysql.com/products/workbench/). But feel free to use whichever you prefer.
 
 You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
-
-## Heroku
-
-Maybe the default instalation formula might not have the latest version of the Heroku Client, which is updated pretty often. Let's update it now:
-
-    $ heroku update
-
-Don't be afraid to run `heroku update` every now and then to always have the most recent version.
-
-### Usage
-
-Login to your Heroku account using your email and password:
-
-    $ heroku login
-
-If this is a new account, and since you don't already have a public **SSH key** in your `~/.ssh` directory, it will offer to create one for you. Say yes! It will also upload the key to your Heroku account, which will allow you to deploy apps from this computer.
-
-If it didn't offer create the SSH key for you (i.e. your Heroku account already has SSH keys associated with it), you can do so manually by running:
-
-     $ mkdir ~/.ssh
-     $ ssh-keygen -t rsa
-
-Keep the default file name and skip the passphrase by just hitting Enter both times. Then, add the key to your Heroku account:
-
-    $ heroku keys:add
-
-Once the key business is done, you're ready to deploy apps! Heroku has a great [Getting Started](https://devcenter.heroku.com/articles/python) guide, so I'll let you refer to that (the one linked here is for Python, but there is one for every popular language). Heroku uses Git to push code for deployment, so make sure your app is under Git version control. A quick cheat sheet (if you've used Heroku before):
-
-    $ cd myapp/
-    $ heroku create myapp
-    $ git push heroku master
-    $ heroku ps
-    $ heroku logs -t
-
-The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resources, so be sure to check it out!
 
 ## MongoDB
 
@@ -288,17 +242,16 @@ Here is a quick list of some apps in the installer script:
 * Node.js, Ruby, Python, Bower, Gulp, Grunt, Git, Yeoman, N (node manager), own-ip.
 * A bunch of Fonts.
 * Essential Quicklook plugins (so you can view code, zip contents and other things)
-* Essential Software: Chrome, Firefox, Dropbox, Skype, Slack, Spotify, iTerm2, SublimeText, Atom, SourceTree and a few more.
+* Essential Software: Chrome, Firefox, Dropbox, Skype, Slack, Spotify, iTerm2, Atom, SourceTree and a few more.
 * A lot of OSX tweaks, like disabling the annoying Mac startup sound.
 
 ### Options
 
-* *Developer Tools*: Ngrok, Sequel Pro, Cyberduck, mysql, mongodb, redis, robomongo, docker, heroku-toolbelt.
+* *Developer Tools*: Ngrok, Sequel Pro, Cyberduck, mysql, mongodb, redis, robomongo, docker.
 * *Android Tools*: Java, Android Studio.
 * *iOS Tools*: Cocoapods.
 * *Web Developer Tools*: Imageoptim, WebStorm.
 * *Designer Tools*: Invision Sync, Scala Preview.
-* *Sublime Text 3*: Emmet, Markdown, SASS, Linters, Git, Material Theme and other packages.
 * *Animations*: Makes all the Finder animations (Spaces, Exposé, Resizing) much faster.
 
 
