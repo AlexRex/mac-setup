@@ -143,7 +143,7 @@ os.system('git config --global credential.helper osxkeychain')
 # Appropriate Software
 if options['developer'] == 'y':
   print "Installing Developer Tools"
-  os.system('brew cask install ngrok sequel-pro cyberduck mysql mongodb redis robomongo')
+  os.system('brew cask install ngrok sequel-pro cyberduck mysql mongodb redis robomongo docker')
 
 if options['android'] == 'y':
   print "Installing Android Tools"

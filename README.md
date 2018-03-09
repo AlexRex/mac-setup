@@ -247,7 +247,7 @@ Here is a quick list of some apps in the installer script:
 
 ### Options
 
-* *Developer Tools*: Ngrok, Sequel Pro, Cyberduck, mysql, mongodb, redis, robomongo.
+* *Developer Tools*: Ngrok, Sequel Pro, Cyberduck, mysql, mongodb, redis, robomongo, docker.
 * *Android Tools*: Java, Android Studio.
 * *iOS Tools*: Cocoapods.
 * *Web Developer Tools*: Imageoptim, WebStorm.
