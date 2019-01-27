@@ -119,7 +119,7 @@ os.system('brew link --overwrite git python python3 ruby')
 os.system('curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash | PROFILE="~/.dotfiles/.tooling"')
 
 print "Installing Useful Stuff"
-os.system('brew install graphicsmagick curl wget sqlite libpng libxml2 openssl')
+os.system('brew install curl wget openssl')
 
 print "Installing Command Line Tools"
 os.system('npm install -g yo own-ip')
@@ -134,7 +134,8 @@ os.system('brew cask install font-dosis font-droid-sans font-open-sans font-open
 
 print "Installing Essential Apps"
 os.system('brew cask install iterm2 spectacle the-unarchiver')
-os.system('brew cask install google-chrome firefox visual-studio-code skype spotify slack vlc cheatsheet trayplay')
+os.system('brew cask install google-chrome firefox visual-studio-code insomnia')
+os.system('brew cask install skype spotify slack vlc cheatsheet trayplay notion')
 os.system('code --install-extension Shan.code-settings-sync')
 os.system('curl -o ~/Library/Application\ Support/Code/User/settings.json https://raw.githubusercontent.com/AlexRex/mac-setup/master/vscode-settings.json')
 
