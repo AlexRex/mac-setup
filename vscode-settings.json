@@ -1,0 +1,115 @@
+{
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "workbench.colorTheme": "Atom One Dark",
+  "window.zoomLevel": 0,
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, Consolas, 'Courier New', Courier",
+  "terminal.integrated.fontSize": 12,
+  "workbench.startupEditor": "newUntitledFile",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "explorer.openEditors.visible": 0,
+  "explorer.autoReveal": true,
+  "extensions.ignoreRecommendations": false,
+  "macros": {
+    "deleteAllLeftCustom": [
+      "deleteAllLeft",
+      "deleteWordLeft"
+    ]
+  },
+  "files.insertFinalNewline": true,
+  "editor.rulers": [
+    100
+  ],
+  "editor.minimap.enabled": false,
+  "sync.gist": "b55dee4407f3b04a1c7b75570857fa8c",
+  "sync.lastUpload": "2018-07-23T23:06:31.759Z",
+  "sync.autoDownload": false,
+  "sync.autoUpload": true,
+  "sync.lastDownload": "2018-05-29T18:46:34.149Z",
+  "sync.forceDownload": false,
+  "sync.anonymousGist": false,
+  "sync.host": "",
+  "sync.pathPrefix": "",
+  "sync.quietSync": false,
+  "sync.askGistName": false,
+  "gitlens.codeLens.scopes": [
+    "document",
+    "containers"
+  ],
+  "gitlens.blame.highlight.locations": [
+    "gutter",
+    "line",
+    "overview"
+  ],
+  "editor.tabSize": 2,
+  "gitlens.keymap": "alternate",
+  "sync.removeExtensions": true,
+  "sync.syncExtensions": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "explorer.confirmDragAndDrop": false,
+  "autoimport.filesToScan": "**/*.{ts,tsx,js}",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "terminal.integrated.shell.osx": "/bin/bash",
+  "npm.enableScriptExplorer": true,
+  // "workbench.iconTheme": "eq-material-theme-icons",
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#2979FF",
+    "list.activeSelectionForeground": "#2979FF",
+    "list.inactiveSelectionForeground": "#2979FF",
+    "list.highlightForeground": "#2979FF",
+    "scrollbarSlider.activeBackground": "#2979FF50",
+    "editorSuggestWidget.highlightForeground": "#2979FF",
+    "textLink.foreground": "#2979FF",
+    "progressBar.background": "#2979FF",
+    "pickerGroup.foreground": "#2979FF",
+    "tab.activeBorder": "#2979FF",
+    "notificationLink.foreground": "#2979FF"
+  },
+  // Enables font ligatures
+  "editor.fontLigatures": true,
+  // Controls if file decorations should use badges.
+  "explorer.decorations.badges": false,
+  "colorize.languages": [
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg",
+    "javascript",
+    ".js"
+  ],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "files.maxMemoryForLargeFilesMB": 10000,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.tabCompletion": "on",
+  "emmet.triggerExpansionOnTab": true,
+  "editor.parameterHints.enabled": false,
+  "javascript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "workbench.panel.defaultLocation": "right",
+  "workbench.statusBar.feedback.visible": false,
+  "jest.autoEnable": false,
+  "jest.showCoverageOnLoad": true,
+  "javascript.suggestionActions.enabled": true
+}

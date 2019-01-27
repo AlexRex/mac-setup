@@ -59,7 +59,7 @@ while options['showhiddenfiles'] not in ['y', 'n']:
   options['showhiddenfiles'] = raw_input("Do you want to show hidden files? (%s)  " % '|'.join(['y','n']))
 
 while options['autoupdate'] not in ['y', 'n']:
-  options['autoupdate'] = raw_input("Do you want to update your computer automatically? (Recommended) (%s)  " % '|'.join(['y','n']))
+  options['autoupdate'] = raw_input("Do you want to update your brew automatically? (Recommended) (%s)  " % '|'.join(['y','n']))
 
 
 print "Hi %s!" % name
@@ -104,16 +104,25 @@ os.system('brew tap homebrew/versions')
 os.system('brew update && brew upgrade && brew cleanup && brew cask cleanup')
 
 
+print "Creating Essential Dotfiles"
+os.system('mkdir ~/.dotfiles')
+os.system('curl -o ~/.bash_profile https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.bash_profile')
+os.system('curl -o ~/.gitconfig https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.gitconfig')
+os.system('curl -o ~/.dotfiles/.aliases https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.aliases')
+os.system('curl -o ~/.dotfiles/.tooling https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.tooling')
+os.system('curl -o ~/.dotfiles/.bash_prompt https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.bash_prompt')
+
 # Install Languages
 print "Installing Git+NodeJS+Python+Ruby"
-os.system('brew install git node python python3 ruby')
-os.system('brew link --overwrite git node python python3 ruby')
+os.system('brew install git python python3 ruby')
+os.system('brew link --overwrite git python python3 ruby')
+os.system('curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash | PROFILE="~/.dotfiles/.tooling"')
 
 print "Installing Useful Stuff"
 os.system('brew install graphicsmagick curl wget sqlite libpng libxml2 openssl')
 
 print "Installing Command Line Tools"
-os.system('npm install -g yo bower gulp-cli grunt-cli node-gyp n own-ip')
+os.system('npm install -g yo own-ip')
 
 
 # OSX Tweaks & Essentials
@@ -125,15 +134,9 @@ os.system('brew cask install font-dosis font-droid-sans font-open-sans font-open
 
 print "Installing Essential Apps"
 os.system('brew cask install iterm2 spectacle the-unarchiver')
-os.system('brew cask install google-chrome firefox sourcetree atom dropbox skype spotify slack vlc macdown cheatsheet trayplay')
-os.system('ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom')
-
-print "Creating Essential Dotfiles"
-os.system('mkdir ~/.dotfiles')
-os.system('curl -o ~/.bash_profile https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.bash_profile')
-os.system('curl -o ~/.gitconfig https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.gitconfig')
-os.system('curl -o ~/.dotfiles/.aliases https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.aliases')
-os.system('curl -o ~/.dotfiles/.bash_prompt https://raw.githubusercontent.com/AlexRex/mac-setup/master/.dotfiles/.bash_prompt')
+os.system('brew cask install google-chrome firefox visual-studio-code skype spotify slack vlc cheatsheet trayplay')
+os.system('code --install-extension Shan.code-settings-sync')
+os.system('curl -o ~/Library/Application\ Support/Code/User/settings.json https://raw.githubusercontent.com/AlexRex/mac-setup/master/vscode-settings.json')
 
 print "Setting Git Credentials"
 os.system('git config --global user.name "%s"' % name)
@@ -143,7 +146,7 @@ os.system('git config --global credential.helper osxkeychain')
 # Appropriate Software
 if options['developer'] == 'y':
   print "Installing Developer Tools"
-  os.system('brew cask install ngrok sequel-pro cyberduck mysql mongodb redis robomongo docker')
+  os.system('brew cask install sequel-pro cyberduck docker')
 
 if options['android'] == 'y':
   print "Installing Android Tools"
@@ -186,8 +189,6 @@ if options['showhiddenfiles'] == 'y':
 os.system('defaults write com.apple.finder QLEnableTextSelection -bool true')
 # Check for software updates daily
 os.system('defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1')
-# Disable auto-correct
-#os.system('defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false')
 # Require password immediately after sleep or screen saver begins
 os.system('defaults write com.apple.screensaver askForPassword -int 1')
 os.system('defaults write com.apple.screensaver askForPasswordDelay -int 0')
