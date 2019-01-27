@@ -146,6 +146,8 @@ os.system('git config --global credential.helper osxkeychain')
 # Appropriate Software
 if options['developer'] == 'y':
   print "Installing Developer Tools"
+  os.mkdir('~/Dev')
+  os.system('brew install kubectl')
   os.system('brew cask install sequel-pro cyberduck docker')
 
 if options['android'] == 'y':
