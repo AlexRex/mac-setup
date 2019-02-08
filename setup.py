@@ -76,10 +76,10 @@ if not os.path.isfile(os.path.expanduser("~") + '/.ssh/id_rsa.pub'):
 
 
 # Set computer name (as done via System Preferences → Sharing)
-os.system('sudo scutil --set ComputerName "%s"' % name)
-os.system('sudo scutil --set HostName "%s"' % name)
-os.system('sudo scutil --set LocalHostName "%s"' % name)
-os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "%s"' % name)
+#os.system('sudo scutil --set ComputerName "%s"' % name)
+#os.system('sudo scutil --set HostName "%s"' % name)
+#os.system('sudo scutil --set LocalHostName "%s"' % name)
+#os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "%s"' % name)
 
 
 # Check if Xcode Command Line Tools are installed
@@ -147,7 +147,7 @@ os.system('git config --global credential.helper osxkeychain')
 # Appropriate Software
 if options['developer'] == 'y':
   print "Installing Developer Tools"
-  os.mkdir('~/Dev')
+  os.system('mkdir ~/Dev')
   os.system('brew install kubectl')
   os.system('brew cask install sequel-pro cyberduck docker')
 
